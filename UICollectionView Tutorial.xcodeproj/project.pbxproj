@@ -14,6 +14,7 @@
 		8B5793111EC8E73700D33744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B57930F1EC8E73700D33744 /* LaunchScreen.storyboard */; };
 		8B57931C1EC8E73700D33744 /* UICollectionView_TutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B57931B1EC8E73700D33744 /* UICollectionView_TutorialTests.swift */; };
 		8B5793271EC8E73700D33744 /* UICollectionView_TutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5793261EC8E73700D33744 /* UICollectionView_TutorialUITests.swift */; };
+		8B5793371EC8ED2300D33744 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5793361EC8ED2300D33744 /* ColorCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8B5793221EC8E73700D33744 /* UICollectionView TutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UICollectionView TutorialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5793261EC8E73700D33744 /* UICollectionView_TutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView_TutorialUITests.swift; sourceTree = "<group>"; };
 		8B5793281EC8E73700D33744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B5793361EC8ED2300D33744 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorCollectionViewCell.swift; path = ../ColorCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				8B5793061EC8E73700D33744 /* AppDelegate.swift */,
 				8B5793081EC8E73700D33744 /* ViewController.swift */,
+				8B5793361EC8ED2300D33744 /* ColorCollectionViewCell.swift */,
 				8B57930A1EC8E73700D33744 /* Main.storyboard */,
 				8B57930D1EC8E73700D33744 /* Assets.xcassets */,
 				8B57930F1EC8E73700D33744 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5793371EC8ED2300D33744 /* ColorCollectionViewCell.swift in Sources */,
 				8B5793091EC8E73700D33744 /* ViewController.swift in Sources */,
 				8B5793071EC8E73700D33744 /* AppDelegate.swift in Sources */,
 			);
