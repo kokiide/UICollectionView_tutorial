@@ -28,19 +28,24 @@ class ViewController: UIViewController {
     func setupCollectionView(){
         
         let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
         collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
         
         //register ColorCollectionViewCell with ReuseIdentifire colorCell
         
         collectionView.register(ColorCollectionViewCell.self, forCellWithReuseIdentifier: "colorCell")
+        //change to white later
         collectionView.backgroundColor = UIColor.green
+        collectionView.delegate = self
+        collectionView.dataSource = self
         view.addSubview(collectionView)
     }
     
     
 }
 
-extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
+extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
     //in this Delegate method we are Specifying the number of sections in the collectionView
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -54,6 +59,7 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     
+    //only setting up the cells. Cell data setup on different method underneath to make speed faster
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         //using of the ReuseIdentifire by dequeueReusableCell...  now pass this to CCVC by saying as! CCVC
@@ -66,10 +72,17 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     
     //populate with the image type: willdisplaycell and chose top one. will be called after "passing CCVC by using as!" method but before the cells are displayed
     
-    //https://www.youtube.com/watch?v=WiETQhgV2uI 18:20
     
+    //setting up the data of the cells
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        <#code#>
+        let colorCell = cell as! ColorCollectionViewCell
+        colorCell.colorImageView.image = images[indexPath.row]
+    }
+    
+    //specifying the size of the cells. add UICollectionViewDelegateFlowLayout to use this. type cgsize
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 200)
     }
     
 }
