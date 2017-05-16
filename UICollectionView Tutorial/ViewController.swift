@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         
         collectionView.register(ColorCollectionViewCell.self, forCellWithReuseIdentifier: "colorCell")
         //change to white later
-        collectionView.backgroundColor = UIColor.green
+        collectionView.backgroundColor = UIColor.white
         collectionView.delegate = self
         collectionView.dataSource = self
         view.addSubview(collectionView)
